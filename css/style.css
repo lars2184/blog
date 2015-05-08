@@ -6,9 +6,15 @@ body{
 }
 
 .container{
-  max-width: 800px;
-  color: #FFFFFF;
+  max-width: 1200px;
+   color: #FFFFFF;
   margin: 0 auto;
+  overflow: auto;
+  width: 100%;
+}
+
+.clearfix{
+  clear: both;
 }
 
 a{
@@ -31,6 +37,7 @@ header h1{
   margin: 0;
   padding: 0;
   line-height: 100px;
+  text-align: center;
 }
 
 header p{
@@ -42,10 +49,20 @@ header p{
   line-height: 100px;
 }
 
+aside{
+
+  float: right;
+  width: 24%;
+  display: inline;
+}
+
 /* Section */
 
 section{
-  clear: both;
+  float: left;
+  width: 74%;
+  top: 0;
+  display: inline; 
 }
 
 article{
@@ -87,9 +104,34 @@ h3{
   padding-top: 0;
 }
 
-/* Style up to 500px */
+/* Style up to 700px */
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
+
+  aside{
+
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  aside h4{
+    text-align: center;
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
+
+  /* Section */
+
+  section{
+    float: none;
+    top: 0;
+    display: inline; 
+  }
+
+  .aside-body{
+    display: none;
+  }
 
   /* Header */
 
@@ -99,6 +141,8 @@ h3{
     margin: 15px 0 0 0;
     padding: 0;
     line-height: 2em;
+    width: 100%;
+    text-align: center;
   }
 
   header p{
