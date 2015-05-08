@@ -1,0 +1,112 @@
+body{
+  background-color: #40515c;
+  font-family: 'Amiri', serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  max-width: 800px;
+  color: #FFFFFF;
+  margin: 0 auto;
+}
+
+a{
+  text-decoration: none;
+  color: #fb7e40;
+}
+
+/* Header */
+
+header{
+  padding: 2em;
+  margin: 0;
+  padding: 0 2em 0 2em;
+  height: 100px;
+}
+
+header h1{
+  float: left;
+  font-size: 2.5em;
+  margin: 0;
+  padding: 0;
+  line-height: 100px;
+}
+
+header p{
+  float: right;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  color: #a6adb3;
+  line-height: 100px;
+}
+
+/* Section */
+
+section{
+  clear: both;
+}
+
+article{
+  padding: 2em;
+  margin-bottom: 0.5em;
+  background-color: #FFFFFF;
+  color: #40515c;
+}
+
+.date{
+  opacity: 0.5;
+  font-family: 'Verdana', sans-serif;
+  font-size: 0.8em;
+  padding-bottom: 1.25em;
+}
+
+h2{
+  margin: 0;
+  padding: 0;
+}
+
+article p{
+  line-height: 1.5em;
+}
+
+article p:first-of-type{
+
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h3{
+  margin: 0;
+  padding: 0;
+}
+
+.intro{
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Style up to 500px */
+
+@media (max-width: 500px) {
+
+  /* Header */
+
+  header h1{
+    float: left;
+    font-size: 2em;
+    margin: 15px 0 0 0;
+    padding: 0;
+    line-height: 2em;
+  }
+
+  header p{
+    clear: both;
+    font-size: 1em;
+    margin: -10px 0 25px 0;
+    padding: 0;
+    float: left;
+    line-height: 1em;
+  }
+}
