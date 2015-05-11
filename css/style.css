@@ -1,8 +1,27 @@
+/***************************************************
+GENERAL
+***************************************************/
+
 body{
   background-color: #40515c;
   font-family: 'Amiri', serif;
   margin: 0;
   padding: 0;
+}
+
+h2{
+  margin: 0;
+  padding: 0;
+}
+
+h3{
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: #fb7e40;
 }
 
 .container{
@@ -13,16 +32,41 @@ body{
   width: 100%;
 }
 
+section{
+  float: left;
+  width: 74%;
+  top: 0;
+  display: inline; 
+}
+
+article{
+  padding: 2em;
+  margin-bottom: 0.5em;
+  background-color: #FFFFFF;
+  color: #40515c;
+}
+
+aside{
+
+  float: right;
+  width: 24%;
+  display: inline;
+}
+
+dd{
+  padding-right: 20px;
+  line-height: 1.2em;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
 .clearfix{
   clear: both;
 }
 
-a{
-  text-decoration: none;
-  color: #fb7e40;
-}
-
-/* Header */
+/***************************************************
+HEADER
+***************************************************/
 
 header{
   padding: 2em;
@@ -49,30 +93,11 @@ header p{
   line-height: 100px;
 }
 
-aside{
-
-  float: right;
-  width: 24%;
-  display: inline;
-}
-
-/* Section */
 
 
-
-section{
-  float: left;
-  width: 74%;
-  top: 0;
-  display: inline; 
-}
-
-article{
-  padding: 2em;
-  margin-bottom: 0.5em;
-  background-color: #FFFFFF;
-  color: #40515c;
-}
+/***************************************************
+PAGE: BLOG
+***************************************************/
 
 .date{
   opacity: 0.5;
@@ -81,24 +106,8 @@ article{
   padding-bottom: 1.25em;
 }
 
-h2{
-  margin: 0;
-  padding: 0;
-}
-
 article p{
   line-height: 1.5em;
-}
-
-article p:first-of-type{
-
-  margin-top: 0;
-  padding-top: 0;
-}
-
-h3{
-  margin: 0;
-  padding: 0;
 }
 
 .intro{
@@ -106,41 +115,22 @@ h3{
   padding-top: 0;
 }
 
-dt{
 
-}
-
-dd{
-  padding-right: 20px;
-  line-height: 1.2em;
-  font-size: 0.9em;
-  margin-bottom: 15px;
-}
-
-/* ---------------- Glossary --------------*/
+/***************************************************
+PAGE: GLOSSARY
+***************************************************/
 
 #glossary-list{
   width: 100%;
 }
 
-/* Style up to 700px */
+
+
+/***************************************************
+PAGE: MOBILE
+***************************************************/
 
 @media (max-width: 700px) {
-
-  aside{
-
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-
-  aside h4{
-    text-align: center;
-    padding: 0;
-    margin: 0 0 15px 0;
-  }
-
-  /* Section */
 
   section{
     float: none;
@@ -151,8 +141,6 @@ dd{
   .aside-body{
     display: none;
   }
-
-  /* Header */
 
   header h1{
     float: left;
@@ -172,4 +160,18 @@ dd{
     float: left;
     line-height: 1em;
   }
+
+  aside{
+
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+
+  aside h4{
+    text-align: center;
+    padding: 0;
+    margin: 0 0 15px 0;
+  }
 }
+
