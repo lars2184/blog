@@ -58,6 +58,8 @@ aside{
 
 /* Section */
 
+
+
 section{
   float: left;
   width: 74%;
@@ -102,6 +104,23 @@ h3{
 .intro{
   margin-top: 0;
   padding-top: 0;
+}
+
+dt{
+
+}
+
+dd{
+  padding-right: 20px;
+  line-height: 1.2em;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+/* ---------------- Glossary --------------*/
+
+#glossary-list{
+  width: 100%;
 }
 
 /* Style up to 700px */
