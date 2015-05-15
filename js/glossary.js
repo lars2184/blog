@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 function initGlossary(){
 
-  displayGlossary(getGlossary());
+  displayGlossary(getGlossary(), $('#wordList'));
 
   $("#add-word-button").on("click", addWord);
   $("#reset-button").on("click", resetGlossary);
@@ -14,7 +14,7 @@ function initGlossary(){
 function resetGlossary(e){
 
   saveGlossary(initGlossaryDictionary());
-  displayGlossary(getGlossary());
+  displayGlossary(getGlossary(), $('#wordList'));
   e.preventDefault();
 }
 
@@ -26,23 +26,29 @@ function addWord(e){
   var existingGlossary = getGlossary();
   existingGlossary.unshift(entry);
   saveGlossary(existingGlossary);
-  displayGlossary(getGlossary());
+  displayGlossary(getGlossary(), $('#wordList'));
   $("#new-word").val("");
   $("#new-word-definition").val("");
   e.preventDefault();
 }
 
-function displayGlossary(glossaryData){
+function displayGlossary(glossaryData, $container, numToDisplay){
 
-  var $glossaryList = $('#wordList');
+
+  var $glossaryList = $container;
   $glossaryList.html(" ");
+
   $.each(glossaryData,function(index, entry){
 
-    if(entry.url != ""){
+    if(index < numToDisplay || numToDisplay === undefined){
 
-      $glossaryList.append("<dt><a href='"+entry.url+"' target='blank'>" + entry.word + "</a></dt><dd>" + entry.definition + "</dd>");
-    }else{
-      $glossaryList.append("<dt>" + entry.word + "</dt><dd>" + entry.definition + "</dd>");
+      if(entry.url != ""){
+
+        $glossaryList.append("<dt><a href='"+entry.url+"' target='blank'>" + entry.word + "</a></dt><dd>" + entry.definition + "</dd>");
+      }else{
+        $glossaryList.append("<dt>" + entry.word + "</dt><dd>" + entry.definition + "</dd>");
+      }
+
     }
     
   });
