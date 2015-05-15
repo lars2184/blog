@@ -1,0 +1,84 @@
+@media screen and (min-width: 480px){
+ 
+  
+  
+  
+}
+
+@media screen and (min-width: 660px){
+
+  section{
+    float: left;
+    width: 68%; 
+  }
+
+  aside{
+    float: right;
+    width: 28%;
+    
+  }
+
+  footer{
+    padding-top: 30px;
+  }
+
+  /****************************************************
+  PAGE: GLOSSARY
+  ****************************************************/
+
+  #glossary-list{
+    width: 100%;
+  }
+
+  #glossary-list form{
+
+    float: left;
+    width: 28%;
+    padding-top: 15px;
+  }
+
+  #glossary-list article{
+
+    clear: none;
+    float: right;
+    width: 65%;
+    padding: 0; 
+    margin-left: 3%;
+  }
+
+  #add-word-button{
+    clear: both;
+    display: block;
+    float: left;
+    margin-top: 10px;
+  }
+
+  /*header{
+
+    border-radius: 4px;
+    background-color: #2C3E50;
+    width: 100%;
+    height: 70px;
+    margin-top: 15px;
+  }
+
+  header h1{
+
+    float: left;
+    width: 40%;
+  }
+
+  header nav{
+
+    float: right;
+    width: 40%;
+    background-color: inherit;
+
+  }
+
+  header h1 a{
+
+    color: #ECF0F1;
+  }*/
+    
+}

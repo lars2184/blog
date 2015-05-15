@@ -6,6 +6,7 @@
   <link href='http://fonts.googleapis.com/css?family=Amiri' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
   <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/glossary.js"></script>
   <script type="text/javascript" src="js/home.js"></script>
@@ -14,9 +15,15 @@
 <div class="container">
   <header>
     <h1><a href="index.html">Lars Jacobson</a></h1>
-    <nav></nav>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="selected">Blog</a></li>
+        <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <aside><div id="glossary"><h4><a href="glossary.html">Glossary</a></h4><div class="aside-body"><dl id="glossaryList"></dl><a href="glossary.html">View All</a></div></aside>
+  
   <section>
     <article>
       <div class="date">May 9, 2015</div>
@@ -30,6 +37,17 @@
       <p class="intro">This is where you can debug files. Once you type command + p to select a file, you can set breakpoints in the code where the code execution should stop. Once stopped, you can inspect the objects and variables to debug the code. To advance the code, click the ‘step over’ button or click play to resume. If there’s an object or variable you’d like to keep an eye on you can enter it in the ‘Watch Expressions’ panel.</p>
     </article>
   </section>
+
+  <aside>
+    <div id="aside-container">
+      <div id="glossary">
+        <h4><a href="glossary.html">Glossary</a></h4>
+        <div class="aside-body">
+          <dl id="glossaryList"></dl><a href="glossary.html" class="align-right">View All</a>
+        </div>
+      </div>
+    </div>
+  </aside>
   
 
   <footer>

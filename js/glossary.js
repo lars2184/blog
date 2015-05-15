@@ -5,10 +5,38 @@ $(document).ready(function(){
 
 function initGlossary(){
 
-  var glossaryDictionary = initGlossaryDictionary();
+  displayGlossary(getGlossary());
+
+  $("#add-word-button").on("click", addWord);
+  $("#reset-button").on("click", resetGlossary);
+}
+
+function resetGlossary(e){
+
+  saveGlossary(initGlossaryDictionary());
+  displayGlossary(getGlossary());
+  e.preventDefault();
+}
+
+function addWord(e){
+
+  var newWord = $("#new-word").val();
+  var newWordDefinition = $("#new-word-definition").val();
+  var entry = {word: newWord, definition: newWordDefinition, url:""};
+  var existingGlossary = getGlossary();
+  existingGlossary.unshift(entry);
+  saveGlossary(existingGlossary);
+  displayGlossary(getGlossary());
+  $("#new-word").val("");
+  $("#new-word-definition").val("");
+  e.preventDefault();
+}
+
+function displayGlossary(glossaryData){
+
   var $glossaryList = $('#wordList');
   $glossaryList.html(" ");
-  $.each(glossaryDictionary,function(index, entry){
+  $.each(glossaryData,function(index, entry){
 
     if(entry.url != ""){
 
@@ -18,7 +46,27 @@ function initGlossary(){
     }
     
   });
+}
 
+function saveGlossary(glossaryData){
+
+  localStorage.setItem('blogGlossary', JSON.stringify(glossaryData));
+}
+
+function getGlossary(){
+
+  var blogGlossaryString = localStorage.getItem('blogGlossary');
+
+  if(blogGlossaryString === null){
+
+    //init glossary
+    return(initGlossaryDictionary());
+
+  }else{
+
+    // return glossary
+    return(JSON.parse(blogGlossaryString));
+  }
 }
 
 function initGlossaryDictionary(){
