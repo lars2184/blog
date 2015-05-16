@@ -44,25 +44,25 @@ $asideLinkColor: $lightBlue;
 
 
 // white article bg - no aside bg
-// $bgColor: $offWhite;
+$bgColor: $offWhite;
 
-// $HeaderLogoColor: $lightBlue;
+$HeaderLogoColor: $lightBlue;
 
-// $navBgColor: $darkBlue;
-// $navButtonColor: $lightBlue;
-// $navButtonSelectedColor: $red;
+$navBgColor: $darkBlue;
+$navButtonColor: $lightBlue;
+$navButtonSelectedColor: $red;
 
-// $articleBgColor: $white;
-// $articleHeaderColor: $darkBlue;
-// $articleTextColor: $grey;
-// $articleDateColor: $red;
-// $articleLinkColor: $lightBlue;
+$articleBgColor: $white;
+$articleHeaderColor: $darkBlue;
+$articleTextColor: $grey;
+$articleDateColor: $red;
+$articleLinkColor: $lightBlue;
 
-// $asideBgColor: $offWhite;
-// $asideWordBgColor: $offWhite;
-// $asideHeaderColor: $darkBlue;
-// $asideTextColor: $grey;
-// $asideLinkColor: $lightBlue;
+$asideBgColor: $offWhite;
+$asideWordBgColor: $offWhite;
+$asideHeaderColor: $darkBlue;
+$asideTextColor: $grey;
+$asideLinkColor: $lightBlue;
 
 
 
@@ -88,6 +88,55 @@ $asideWordBgColor: $lightBlue;
 $asideHeaderColor: $white;
 $asideTextColor: $offWhite;
 $asideLinkColor: $darkBlue;
+
+
+
+// white article bg - blue aside bg
+$bgColor: $offWhite;
+
+$HeaderLogoColor: $lightBlue;
+
+$navBgColor: $darkBlue;
+$navButtonColor: $lightBlue;
+$navButtonSelectedColor: $red;
+
+$articleBgColor: $white;
+$articleHeaderColor: $darkBlue;
+$articleTextColor: $grey;
+$articleDateColor: $red;
+$articleLinkColor: $lightBlue;
+
+$asideBgColor: $Blue;
+$asideWordBgColor: $lightBlue;
+$asideHeaderColor: $white;
+$asideTextColor: $offWhite;
+$asideLinkColor: $darkBlue;
+
+
+
+// no article bg - blue aside bg
+$bgColor: $darkBlue;
+
+$HeaderLogoColor: $offWhite;
+
+$navBgColor: $darkBlue;
+$navButtonColor: $lightBlue;
+$navButtonSelectedColor: $red;
+
+$articleBgColor: $offWhite;
+$articleHeaderColor: $darkBlue;
+$articleTextColor: $grey;
+$articleDateColor: $red;
+$articleLinkColor: $lightBlue;
+
+$asideBgColor: $Blue;
+$asideWordBgColor: $lightBlue;
+$asideHeaderColor: $offWhite;
+$asideTextColor: $offWhite;
+$asideLinkColor: $darkBlue;
+
+$footerTextColor: $offWhite;
+$footerLinkColor: $lightBlue;
 
 
 
@@ -215,7 +264,7 @@ article{
   background-color: $articleBgColor;
   border-radius: 6px;
   margin-bottom: 15px;
-  padding: 20px 3% 10px;
+  padding: 20px 4% 10px;
 }
 
 article .date{
@@ -252,21 +301,17 @@ aside{
   float: left;
   width: 100%;
   padding: 0;
-  margin: 15px 0 0;
+  margin: 0px 0 0;
   border-radius: 6px;
   background-color: $asideBgColor;
-}
-
-#aside-container{
-  padding: 15px 5% 15px;
 }
 
 aside h4{
 
   color: $asideHeaderColor;
   @extend .reset;
-  font-size: 1.2em;
-  margin: 15px 4%;
+  font-size: 1.1em;
+  margin: 15px 5%;
 
   
 }
@@ -317,14 +362,14 @@ aside dt a{
   text-align: right;
   display: block;
   color: $asideLinkColor;
-  margin: 0 -4% 15px;
+  margin: 0 -5% 15px;
   font-weight: bold;
   font-size: 0.8em;
 }
 
 aside .glossary-word{
 
-   padding: 15px 4%;
+   padding: 15px 5%;
 
 }
 
@@ -413,6 +458,12 @@ footer{
   text-align: center;
   font-size: 0.7em;
   padding: 20px 0 20px;
+  color: $footerTextColor;
+}
+
+footer a{
+
+  color: $footerLinkColor;
 }
 
 

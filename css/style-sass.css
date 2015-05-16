@@ -11,7 +11,7 @@ GENERAL
   padding: 0 5%; }
 
 body {
-  background-color: #ECF0F1; }
+  background-color: #2C3E50; }
 
 a {
   text-decoration: none;
@@ -36,7 +36,7 @@ header {
   margin-bottom: 20px; }
 
 header h1 a {
-  color: #3498DB; }
+  color: #ECF0F1; }
 
 h1 {
   text-align: center;
@@ -77,7 +77,7 @@ article {
   background-color: #ECF0F1;
   border-radius: 6px;
   margin-bottom: 15px;
-  padding: 20px 3% 10px; }
+  padding: 20px 4% 10px; }
 
 article .date {
   color: #E74C3C;
@@ -105,17 +105,14 @@ aside {
   float: left;
   width: 100%;
   padding: 0;
-  margin: 15px 0 0;
+  margin: 0px 0 0;
   border-radius: 6px;
   background-color: #2980B9; }
 
-#aside-container {
-  padding: 15px 5% 15px; }
-
 aside h4 {
-  color: #fff;
-  font-size: 1.2em;
-  margin: 15px 4%; }
+  color: #ECF0F1;
+  font-size: 1.1em;
+  margin: 15px 5%; }
 
 aside h4 a {
   color: #2C3E50; }
@@ -125,7 +122,7 @@ PAGE: BLOG
 ****************************************************/
 aside dt {
   font-size: 0.9em;
-  color: #fff;
+  color: #ECF0F1;
   font-weight: bold; }
 
 aside dd {
@@ -142,12 +139,12 @@ aside dt a {
   text-align: right;
   display: block;
   color: #2C3E50;
-  margin: 0 -4% 15px;
+  margin: 0 -5% 15px;
   font-weight: bold;
   font-size: 0.8em; }
 
 aside .glossary-word {
-  padding: 15px 4%; }
+  padding: 15px 5%; }
 
 aside .glossary-word:nth-child(2n + 1) {
   background-color: #3498DB; }
@@ -213,7 +210,11 @@ footer {
   clear: both;
   text-align: center;
   font-size: 0.7em;
-  padding: 20px 0 20px; }
+  padding: 20px 0 20px;
+  color: #ECF0F1; }
+
+footer a {
+  color: #3498DB; }
 
 /****************************************************
 RESPONSIVE
