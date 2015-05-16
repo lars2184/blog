@@ -11,6 +11,7 @@
 </head>
 <body>
 <div class="container">
+
   <header>
     <h1><a href="index.html">Lars Jacobson</a></h1>
     <nav>
@@ -22,10 +23,7 @@
     </nav>
   </header>
   
-  <section id="glossary-list">
-    
-    <h2>Glossary</h2>
-
+  <section id="glossary-form">
     <form id="new-word-form" action="#">
         <label name="new-word" id="new-word-label">New word</label>
         <input id="new-word" name="new-word" class="form-control" type="text">
@@ -35,19 +33,19 @@
         <button id="add-word-button">Add word to glossary</button>
         
     </form>
+  </section>
 
+  <section id="glossary-list">
     <article>
-      
+        <h2>Glossary</h2>
         <dl id="wordList"></dl>
     </article>
-
-
   </section>
   
-
   <footer>
   &copy; 2014 Lars Jacobson  -  <a href="index.html">Blog</a> | <a href="glossary.html">Glossary</a> | <a href="contact.html">Contact</a>
   </footer>
+
 </div>
 </body>
 </html>

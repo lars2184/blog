@@ -3,7 +3,7 @@ $darkBlue: #2C3E50;
 $red: #E74C3C;
 $offWhite: #ECF0F1;
 $lightBlue: #3498DB;
-$Blue: #2980B9;
+$blue: #2980B9;
 $white: #fff;
 $almostWhite: #F5F9FA;
 $black: #666;
@@ -13,7 +13,7 @@ $grey: #666;
 $linkColor: $lightBlue;
 $bgColor: $offWhite;
 $primaryColor: $darkBlue;
-$secondaryColor: $Blue;
+$secondaryColor: $blue;
 $highlightColor: $red;
 $secondaryBgColor: $white;
 $textColor: $black;
@@ -83,7 +83,7 @@ $articleTextColor: $grey;
 $articleDateColor: $red;
 $articleLinkColor: $lightBlue;
 
-$asideBgColor: $Blue;
+$asideBgColor: $blue;
 $asideWordBgColor: $lightBlue;
 $asideHeaderColor: $white;
 $asideTextColor: $offWhite;
@@ -106,7 +106,7 @@ $articleTextColor: $grey;
 $articleDateColor: $red;
 $articleLinkColor: $lightBlue;
 
-$asideBgColor: $Blue;
+$asideBgColor: $blue;
 $asideWordBgColor: $lightBlue;
 $asideHeaderColor: $white;
 $asideTextColor: $offWhite;
@@ -129,7 +129,7 @@ $articleTextColor: $grey;
 $articleDateColor: $red;
 $articleLinkColor: $lightBlue;
 
-$asideBgColor: $Blue;
+$asideBgColor: $blue;
 $asideWordBgColor: $lightBlue;
 $asideHeaderColor: $offWhite;
 $asideTextColor: $offWhite;
@@ -137,6 +137,10 @@ $asideLinkColor: $darkBlue;
 
 $footerTextColor: $offWhite;
 $footerLinkColor: $lightBlue;
+
+$glossaryFormBg: $blue;
+
+$glossaryArticleBg: $offWhite;
 
 
 
@@ -382,18 +386,31 @@ aside .glossary-word:nth-child(2n + 1){
 PAGE: GLOSSARY
 ****************************************************/
 
+#glossary-form{
 
-
-#new-word-form label{
-  display: block;
-  text-align: left;
-  padding-right: 2%;
-  font-size: 0.8em;
-  padding-bottom: 0.4em;
-
+  background-color: $glossaryFormBg;
+  border-radius: 6px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
 }
 
-#new-word-form input, #new-word-form textarea{
+#glossary-form form{
+
+  width: 90%;
+  padding: 15px 5%;
+  margin: 0;
+}
+
+#glossary-form form label{
+  display: block;
+  text-align: left;
+  font-size: 0.8em;
+  padding-bottom: 0.4em;
+  width: 100%;
+}
+
+#glossary-form form input, #glossary-form form textarea{
 
   width: 100%;
   margin-bottom: 0.8em;
@@ -422,6 +439,7 @@ button{
   border: none;
   padding: 0.8em;
   font-size: 0.7em;
+
 }
 
 #reset-button{
@@ -430,7 +448,12 @@ button{
 }
 
 #add-word-button{
-  background-color: $linkColor;
+  background-color: $darkBlue;
+  margin-bottom: 15px;
+}
+
+article #wordList{
+  padding: 10px 5%;
 }
 
 article #wordList dt{
@@ -510,18 +533,23 @@ RESPONSIVE
     width: 100%;
   }
 
-  #glossary-list form{
+  #glossary-form{
 
     float: left;
     width: 28%;
+  }
+
+  #glossary-form form{
+
+    
     padding-top: 15px;
   }
 
-  #glossary-list article{
+  #glossary-list{
 
     clear: none;
     float: right;
-    width: 65%;
+    width: 69%;
     padding: 0; 
     margin-left: 3%;
   }
@@ -533,10 +561,9 @@ RESPONSIVE
     margin-top: 10px;
   }
 
-  /*header{
+  header{
 
     border-radius: 4px;
-    background-color: #2C3E50;
     width: 100%;
     height: 70px;
     margin-top: 15px;
@@ -546,6 +573,8 @@ RESPONSIVE
 
     float: left;
     width: 40%;
+    margin: 15px 0;
+    padding: 0;
   }
 
   header nav{
@@ -553,12 +582,19 @@ RESPONSIVE
     float: right;
     width: 40%;
     background-color: inherit;
+    margin: 25px 0;
+    padding: 0;
 
+  }
+
+  header nav ul{
+    text-align: right;
+    margin-right: 5%;
   }
 
   header h1 a{
 
     color: #ECF0F1;
-  }*/
+  }
     
 }
