@@ -41,12 +41,18 @@ section{
 h2{
 
   color: #2C3E50;
-  margin:0px 0 10px;
+  margin:0px 0 0px;
   padding:0;
 }
 
 .selected{
   color: #E74C3C;
+}
+
+p{
+
+  margin: 0 0 1.5em;
+  padding: 0;
 }
 
 /****************************************************
@@ -61,6 +67,8 @@ header h1 a{
 h1{
   text-align: center;
   width: 100%;
+  font-family: 'Sansita One', cursive;
+  font-size: 2.2em;
 }
 
 body{
@@ -109,14 +117,14 @@ article{
 article .date{
 
   color: #999;
-  font-size: 0.7em;
+  font-size: 0.8em;
 
 }
 
 article h2{
 
   color: #2C3E50;
-  margin:20px 0 10px;
+  margin:20px 0 3px;
   padding:0;
 }
 
@@ -124,7 +132,7 @@ article h3{
 
   color: #2C3E50;
   font-size: 1em;
-  margin:0 0 10px;
+  margin:0 0 3px;
   padding:0;
 }
 

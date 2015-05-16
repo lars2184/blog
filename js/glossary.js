@@ -44,9 +44,9 @@ function displayGlossary(glossaryData, $container, numToDisplay){
 
       if(entry.url != ""){
 
-        $glossaryList.append("<dt><a href='"+entry.url+"' target='blank'>" + entry.word + "</a></dt><dd>" + entry.definition + "</dd>");
+        $glossaryList.append("<div class='glossary-word'><dt><a href='"+entry.url+"' target='blank'>" + entry.word + "</a></dt><dd>" + entry.definition + "</dd></div>");
       }else{
-        $glossaryList.append("<dt>" + entry.word + "</dt><dd>" + entry.definition + "</dd>");
+        $glossaryList.append("<div class='glossary-word'><dt>" + entry.word + "</dt><dd>" + entry.definition + "</dd></div>");
       }
 
     }

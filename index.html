@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Lars Jacobson</title>
-  <link href='http://fonts.googleapis.com/css?family=Amiri' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Sansita+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="css/style-sass.css">
   <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/glossary.js"></script>
   <script type="text/javascript" src="js/home.js"></script>
@@ -28,30 +27,36 @@
     <article>
       <div class="date">May 9, 2015</div>
       <h2>Advanced Front End Development: First Week</h2>
-      <p class="intro">I’m taking a Front End Development course through Portland Code School and the first week is in the books. Overall, it was a good week although I have some catching up to do because I jumped straight into the advanced class! I need to brush off my GitHub skills, get up to speed with <a href="https://teamtreehouse.com/" target="blank">Treehouse</a> and figure out what the heck <a href="https://slack.com/" target="blank">Slack</a> is.</p>
+      <p>I’m taking a Front End Development course through Portland Code School and the first week is in the books. Overall, it was a good week although I have some catching up to do because I jumped straight into the advanced class! I need to brush off my GitHub skills, get up to speed with <a href="https://teamtreehouse.com/" target="blank">Treehouse</a> and figure out what the heck <a href="https://slack.com/" target="blank">Slack</a> is.</p>
       <p>In the first class, we were introduced to pair programming, which is something I’ve never done. As an introduction, we played a game called <a href="http://www.123freecell.com/" target="blank">Free Cell</a>  in pairs. We were then given an assignment to create a web site for a fictional company called the Animal Adoption Agency. <a href="http://stephanieargy.github.io/journal/" target="blank">Stephanie</a> and I paired up over Skype to work on the project and it worked well sharing windows so we could work on the same code. We were able to store the list of kittens in a JSON object and use the list to display them.</p>
       <p>In the second class, we got a review of jQuery. It’s been awhile since I’ve used jQuery, so it was good to go over some key methods. We also had a good overview of the following tabs in the Chrome Developer Tools console:</p>
       <h3>Network</h3>
-      <p class="intro">I never knew how to make this tab work, but the trick is to click the ‘Disable cache’ box and then refresh the page. All of the page assets are then shown along with load times. A blue line shows when the page is loaded and a red line shows when it is ready, which corresponds to the ready jQuery event.</p>
+      <p>I never knew how to make this tab work, but the trick is to click the ‘Disable cache’ box and then refresh the page. All of the page assets are then shown along with load times. A blue line shows when the page is loaded and a red line shows when it is ready, which corresponds to the ready jQuery event.</p>
       <h3>Sources</h3>
-      <p class="intro">This is where you can debug files. Once you type command + p to select a file, you can set breakpoints in the code where the code execution should stop. Once stopped, you can inspect the objects and variables to debug the code. To advance the code, click the ‘step over’ button or click play to resume. If there’s an object or variable you’d like to keep an eye on you can enter it in the ‘Watch Expressions’ panel.</p>
+      <p>This is where you can debug files. Once you type command + p to select a file, you can set breakpoints in the code where the code execution should stop. Once stopped, you can inspect the objects and variables to debug the code. To advance the code, click the ‘step over’ button or click play to resume. If there’s an object or variable you’d like to keep an eye on you can enter it in the ‘Watch Expressions’ panel.</p>
+    </article>
+    <article>
+      <div class="date">May 9, 2015</div>
+      <h2>Advanced Front End Development: First Week</h2>
+      <p>I’m taking a Front End Development course through Portland Code School and the first week is in the books. Overall, it was a good week although I have some catching up to do because I jumped straight into the advanced class! I need to brush off my GitHub skills, get up to speed with <a href="https://teamtreehouse.com/" target="blank">Treehouse</a> and figure out what the heck <a href="https://slack.com/" target="blank">Slack</a> is.</p>
+      <p>In the first class, we were introduced to pair programming, which is something I’ve never done. As an introduction, we played a game called <a href="http://www.123freecell.com/" target="blank">Free Cell</a>  in pairs. We were then given an assignment to create a web site for a fictional company called the Animal Adoption Agency. <a href="http://stephanieargy.github.io/journal/" target="blank">Stephanie</a> and I paired up over Skype to work on the project and it worked well sharing windows so we could work on the same code. We were able to store the list of kittens in a JSON object and use the list to display them.</p>
+      <p>In the second class, we got a review of jQuery. It’s been awhile since I’ve used jQuery, so it was good to go over some key methods. We also had a good overview of the following tabs in the Chrome Developer Tools console:</p>
+      <h3>Network</h3>
+      <p>I never knew how to make this tab work, but the trick is to click the ‘Disable cache’ box and then refresh the page. All of the page assets are then shown along with load times. A blue line shows when the page is loaded and a red line shows when it is ready, which corresponds to the ready jQuery event.</p>
+      <h3>Sources</h3>
+      <p>This is where you can debug files. Once you type command + p to select a file, you can set breakpoints in the code where the code execution should stop. Once stopped, you can inspect the objects and variables to debug the code. To advance the code, click the ‘step over’ button or click play to resume. If there’s an object or variable you’d like to keep an eye on you can enter it in the ‘Watch Expressions’ panel.</p>
     </article>
   </section>
 
   <aside>
-    <div id="aside-container">
-      <div id="glossary">
-        <h4><a href="glossary.html">Glossary</a></h4>
-        <div class="aside-body">
-          <dl id="glossaryList"></dl><a href="glossary.html" class="align-right">View All</a>
-        </div>
-      </div>
-    </div>
+    <h4>New Words</h4>
+    <dl id="glossaryList"></dl>
+    <a href="glossary.html" id="view-glossary">View All Words ></a>
   </aside>
   
 
   <footer>
-
+  &copy; 2014 Lars Jacobson  -  <a href="index.html">Blog</a> | <a href="glossary.html">Glossary</a> | <a href="contact.html">Contact</a>
   </footer>
 </div>
 </body>
