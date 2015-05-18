@@ -277,8 +277,9 @@ RESPONSIVE
   header h1 {
     float: left;
     width: 40%;
-    margin: 15px 0;
-    padding: 0; }
+    margin: 15px 3%;
+    padding: 0;
+    text-align: left; }
   header nav {
     float: right;
     width: 40%;
