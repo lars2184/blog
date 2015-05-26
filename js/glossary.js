@@ -3,13 +3,32 @@ $(document).ready(function(){
   initGlossary();
 });
 
+var xhr = new XMLHttpRequest();
+
 function initGlossary(){
 
   displayGlossary(getGlossary(), $('#wordList'));
 
   $("#add-word-button").on("click", addWord);
   $("#reset-button").on("click", resetGlossary);
+
+
+  
+
+  xhr.onreadystatechange = function () {
+     if (xhr.readyState === 4) {
+       console.log("result = "+xhr.responseText)
+     }
+  };
+  
+  xhr.open('GET', 'js/glossaryData.js');
+
+  sendAJAX();
 }
+
+function sendAJAX() {
+   xhr.send();
+ }
 
 function resetGlossary(e){
 
