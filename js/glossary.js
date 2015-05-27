@@ -8,7 +8,7 @@ var glossaryFromFile;
 
 function initGlossary(){
 
-  displayGlossary(getGlossary(), $('#wordList'));
+  
 
   $("#add-word-button").on("click", addWord);
   $("#reset-button").on("click", resetGlossary);
@@ -26,6 +26,8 @@ function initGlossary(){
        console.log("glossaryFromFile.dictionary = " + glossaryFromFile.dictionary);
 
        //glossaryFromFile.dictionary
+
+       displayGlossary(getGlossary(), $('#wordList'));
      }
   };
   
