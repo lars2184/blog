@@ -1,0 +1,27 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "Lars Jacobson front end blog",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lars2184/blog.git"
+  },
+  "author": "Lars Jacobson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lars2184/blog/issues"
+  },
+  "homepage": "https://github.com/lars2184/blog#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-autoprefixer": "^3.0.0",
+    "grunt-browser-sync": "^2.1.3",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-sass": "^1.0.0",
+    "load-grunt-tasks": "^3.2.0"
+  }
+}
