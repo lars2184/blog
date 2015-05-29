@@ -13,8 +13,18 @@ function initGlossary(){
   $("#add-word-button").on("click", addWord);
   $("#reset-button").on("click", resetGlossary);
 
-
+  console.log("new glossary");
   
+  loadDefaultGlossaryData(displayGlossaryGlossary);
+  
+}
+
+function displayGlossaryGlossary(){
+
+  displayGlossary(getGlossary(), $('#wordList'));
+}
+
+function loadDefaultGlossaryData(callback){
 
   xhr.onreadystatechange = function () {
      if (xhr.readyState === 4) {
@@ -27,7 +37,9 @@ function initGlossary(){
 
        //glossaryFromFile.dictionary
 
-       displayGlossary(getGlossary(), $('#wordList'));
+       //displayGlossary(getGlossary(), $('#wordList'));
+
+       callback();
      }
   };
   
