@@ -5,6 +5,13 @@ $(document).ready(function(){
 
 var xhr = new XMLHttpRequest();
 var glossaryFromFile;
+var blogClient = new Usergrid.Client({
+
+  orgName: "larsj",
+  appName: "sandbox",
+  logging: true,
+  buildCurl: true
+});
 
 function initGlossary(){
 
@@ -97,7 +104,27 @@ function displayGlossary(glossaryData, $container, numToDisplay){
 
 function saveGlossary(glossaryData){
 
-  localStorage.setItem('blogGlossary', JSON.stringify(glossaryData));
+  var options = {
+
+    type: "glossary",
+    words: glossaryData
+  }
+
+  blogClient.createEntity(options, function(error, result){
+
+    if(error){
+
+      console.log("Error: "+error);
+
+    }else{
+
+      console.log("Result: "+result);
+
+      console.log("Word = "+result.entities[0].words[0].word + " Def: " + result.entities[0].words[0].definition)
+    }
+  });
+
+  //localStorage.setItem('blogGlossary', JSON.stringify(glossaryData));
 }
 
 function getGlossary(){
