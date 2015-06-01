@@ -8,10 +8,10 @@ function initHomeGlossary(){
   // display 3 items from the glossary
   //displayGlossary(getGlossary(), $('#glossaryList'), 3);
 
-  loadDefaultGlossaryData(displayHomeGlossary);
+  getGlossary(displayHomeGlossary);
 }
 
 function displayHomeGlossary(){
 
-  displayGlossary(getGlossary(), $('#glossaryList'), 3);
+  displayGlossary(glossaryApigeeData, $('#glossaryList'), 3);
 }
