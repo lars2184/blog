@@ -6,6 +6,7 @@ $(document).ready(function(){
 var xhr = new XMLHttpRequest();
 var glossaryFromFile;
 var glossaryApigeeData;
+var dataBeingSaved;
 var blogClient = new Usergrid.Client({
 
   orgName: "larsj",
@@ -14,6 +15,7 @@ var blogClient = new Usergrid.Client({
   buildCurl: true
 });
 var glossaryUUID;
+var saveID = 0;
 
 function initGlossary(){
 
@@ -43,14 +45,28 @@ function sendAJAX() {
 
 function resetGlossary(e){
 
-  saveGlossary(initGlossaryDictionary(),displayGlossaryGlossary);
-  //displayGlossary(getGlossary(), $('#wordList'));
+  saveID++;
+
+  console.log("reset glossary: saveID = " + saveID);
+
+  saveGlossary(initGlossaryDictionary(),glossaryReset);
+  displayGlossary(initGlossaryDictionary(), $('#wordList'));
   e.preventDefault();
+}
+
+function glossaryReset(){
+
+  console.log("----------------- glossary reset ------------------ saveID = "+saveID);
+
+  // display updated data from server
+  displayGlossary(glossaryApigeeData, $('#wordList'));
 }
 
 function addWord(e){
 
-  console.log("addWord");
+  saveID++;
+
+  console.log("addWord: saveID = "+saveID);
   e.preventDefault();
 
   var newWord = $("#new-word").val();
@@ -58,11 +74,24 @@ function addWord(e){
   var entry = {word: newWord, definition: newWordDefinition, url:""};
   var existingGlossary = glossaryApigeeData;
   existingGlossary.unshift(entry);
-  saveGlossary(existingGlossary, displayGlossaryGlossary);
-  //displayGlossary(getGlossary(), $('#wordList'));
+  
+  // display updated data
+  displayGlossary(existingGlossary, $('#wordList'));
+
+  // save data to apigee
+  saveGlossary(existingGlossary, glossarySaved);
+
   $("#new-word").val("");
   $("#new-word-definition").val("");
   
+}
+
+function glossarySaved(){
+
+  console.log("----------------- glossary saved ------------------ saveID = "+saveID);
+
+  // display updated data from server
+  displayGlossary(glossaryApigeeData, $('#wordList'));
 }
 
 function displayGlossary(glossaryData, $container, numToDisplay){
@@ -89,12 +118,14 @@ function displayGlossary(glossaryData, $container, numToDisplay){
 
 function saveGlossary(glossaryData, callback){
 
-  console.log("saveGlossary: save");
+  console.log("saveGlossary: save ---");
+
+    dataBeingSaved = glossaryData;
 
     var options = {
 
       type: "glossary",
-      words: glossaryData,
+      words: dataBeingSaved,
       uuid: glossaryUUID
     }
 
@@ -106,11 +137,25 @@ function saveGlossary(glossaryData, callback){
 
       }else{
 
-        console.log("Result: "+result);
+        console.log("Result 2: "+result);
 
         console.log("Word = "+result.entities[0].words[0].word + " Def: " + result.entities[0].words[0].definition);
 
-        glossaryApigeeData = result.entities[0].words;
+        console.log("dataBeingSaved[0].word = "+dataBeingSaved[0].word);
+        console.log("result.entities[0].words[0].word = "+result.entities[0].words[0].word);
+
+        if(JSON.stringify(dataBeingSaved) === JSON.stringify(result.entities[0].words)){
+
+            // data is the same as local data
+
+            glossaryApigeeData = result.entities[0].words;
+
+        }else{
+
+            // data is not the same as local data
+        }
+
+        //glossaryApigeeData = result.entities[0].words;
 
         callback();
       }
